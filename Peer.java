@@ -1,3 +1,19 @@
+/*Peer.java
+ *
+ * Description:
+ *  This is complete project for torrent without central tracking system.
+ *  Each Peer in the torrent act as both server and client.
+ *  Focus is also given on different kind of unreliable network and peer 
+ *  behaviour. Chunks of files are downloaded parallely from different peers.
+ *  Peer history is used to get the good/bad peer. Some kind of fast and slow
+ *  pumping of packets is used to take care of network congestion.
+ *
+ *  See User manual for more detail
+ *
+ * Author: Nandan Dubey(ndubey)
+ *
+ *  
+ */
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.net.*;
@@ -36,7 +52,7 @@ public class Peer {
 	public static String fileDownloadedAck =  "24";
 	public static String sendMasterStr  =    "28";
 	public static void main(String[] args) throws Exception {
-		System.out.println("\n\n\n************ Welcome to Group-2 P2P File Sharing Application ***************\n\n\n");
+		System.out.println("\n\n\n************ Welcome to P2P File Sharing Application ***************\n\n\n");
 		Client client = new Client();
 		Server server = new Server();
 		client.start();
